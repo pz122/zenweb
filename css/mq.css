@@ -1,0 +1,11 @@
+@media screen and (max-width:750px){
+  .down{
+    display: none;
+  }
+  .mylogo{
+    display: none;
+  }
+ #link:hover{
+   letter-spacing: 0px
+ }
+}
