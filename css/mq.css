@@ -6,6 +6,15 @@
     display: none;
   }
  #link:hover{
-   letter-spacing: 0px
+   display:none;
+ }
+ #link a::before, ::after{
+   display: none;
+ }
+ #link a:hover::after,::before{
+   display: none;
+ }
+ #link a:hover::before{
+   display: none;
  }
 }
