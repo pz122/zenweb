@@ -1,0 +1,545 @@
+@import "mobilestyle"
+
+$font: 'Work Sans', sans-serif
+$light: 300
+$regular: 400
+$semibold: 600
+// $bold: 700
+
+
+#home
+  overflow-y: hidden
+  overflow-x: auto
+  height: 100vh
+
+#noscroll
+  overflow-x: hidden
+  height: 100%
+
+#bold
+  font-weight: 600
+
+
+#comingsoon
+  color: white
+  font-size: 18px
+  display: none
+  cursor: pointer
+
+h3
+  font-size: 22px
+
+p
+  font-size: 18px
+
+html, body
+  padding: 0
+  margin: 0
+  font-family: $font
+a
+  text-decoration: none
+
+.main-wrapper
+  padding: 50px 80px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  min-width: 1200px
+
+.logo, .icon
+  top: 40px
+  left: 80px
+  position: fixed
+
+
+.toggle
+  // float: right
+  position: fixed
+  top: 112px
+  right: 100px
+  transform: translate(-50%, -50%)
+  height: 30px
+  width: 80px
+  cursor: pointer
+  z-index: 2
+
+
+  span
+    display: block
+    width: 50px
+    height: 2px
+    position: absolute
+    top: 50%
+    bottom: 0px
+    left: 50%
+    transform: translate(-50%, -50%)
+    background: #262626
+    transition: 0.5s
+
+  span:nth-child(1)
+    transform: translate(-50%, -50%) translateY(-6px)
+    transition: .3s
+
+  span:nth-child(4)
+    transform: translate(-50%, -50%) translateY(6px)
+    transition: .3s
+
+
+
+.toggle:hover
+  span:nth-child(1)
+    transform: translate(-50%, -50%) translateY(-10px)
+.toggle:hover
+  span:nth-child(4)
+    transform: translate(-50%, -50%) translateY(10px)
+
+.toggle.animated
+  span:nth-child(1)
+    transform: translate(-50%, -50%) translateY(-6px)
+    opacity: 0
+    z-index: 1
+.toggle.animated
+  span:nth-child(4)
+    transform: translate(-50%, -50%) translateY(6px)
+    opacity: 0
+    z-index: 1
+
+.toggle.animated
+  span:nth-child(2)
+    transform: translate(-50%, -50%) rotate(45deg)
+    transition-delay: .2s
+    z-index: 2
+    background: #fff
+
+.toggle.animated
+  span:nth-child(3)
+    transform: translate(-50%, -50%) rotate(-45deg)
+    transition-delay: .2s
+    z-index: 2
+    background: #fff
+
+.navigation
+  margin: 0
+  padding: 0
+  top: 0
+  left: -100%
+  position: fixed
+  width: 100%
+  height: 100%
+  background: #262626
+  z-index: -1
+  transition: 0.5s
+
+  ul
+    margin: 0
+    padding: 0
+    position: absolute
+    top: 30%
+    // left: 50%
+    // transform: translate(-50%, -50%)
+    display: flex !important
+    flex-direction: column !important
+    justify-content: flex-start !important
+    padding-left: 100px
+    li
+      list-style: none
+      margin-bottom: 50px
+      font-weight: $light
+      a, span
+        text-transform: capitalize
+        font-size: 22px
+        z-index: 1
+        color: #fff
+        font-weight: $light
+        line-height: 1.5
+        cursor: pointer
+
+.navlink
+  display: inline-block
+
+.navlink::after
+  content: ''
+  display: block
+  // width: 0
+  height: 2px
+  background: #fff
+  // transition: width .3s
+  transition: all 300ms ease-in-out
+  bottom: -5px
+  left: 0
+  transform: scale(0)
+
+.navlink:hover::after
+  // width: 100%
+  transform: scale(1.1)
+
+
+.active
+    left: 0
+    overflow: auto
+    z-index: 1
+
+.homepage
+  top: 170px
+  left: 1200px
+  position: absolute
+  display: flex
+  flex-direction: row
+  width: 100%
+  height: 100vh
+  padding: 20px 100px
+  h1
+    font-weight: $semibold
+
+
+.right
+  width: 200px
+  height: 5px
+  position: relative
+  background: black
+  top: 80px
+  right: 120px
+
+.right::before
+  content: ''
+  position: absolute
+  width: 100px
+  height: 2px
+  background: black
+
+
+.right::after
+  content: ''
+  position: absolute
+  width: 120px
+  height: 2px
+  background: black
+  animation: animate 2s linear infinite
+
+@keyframes animate
+  0%
+    left: 10px
+  40%
+    left: 40px
+  70
+    left: 65px
+  100%
+    left: 80px
+
+
+
+.home
+  width: 1200px
+  height: 80vh
+  display: flex
+  justify-content: center
+  align-items: center
+  left: 200px
+  h1
+    font-family: 'Space Mono', monospace
+    font-size: 70px
+  a
+    color: #202021
+
+.services
+  margin: 35px 150px
+  display: flex
+  flex-direction: row
+  width: 100%
+  .web-design, .graphic-design, .front-end
+    min-width: 400px
+    padding: 8px 80px
+    line-height: 1.7
+    h3
+     text-transform: capitalize
+     font-weight: $semibold
+    p
+      font-weight: $regular
+
+#one, #two, #three
+  -webkit-transition: all 2s
+  -moz-transition: all 2s
+  -o-transition: all 2s
+  transition: all 2s
+  bottom: -400px
+  position: absolute
+  z-index: -1
+
+#one.slideup
+  bottom: 650px
+
+#two.slideup
+  bottom: 180px
+
+#three.slideup
+  bottom: 370px
+
+.aboutme
+  max-width: 800px
+  margin-bottom: 100px
+.intro
+  line-height: 1.2
+
+.about-wrapper
+  line-height: 2
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  flex-wrap: wrap
+  height: 100%
+  margin-top: 180px
+
+#title
+  font-size: 50px
+  font-weight: $regular
+  min-width: 300px
+  padding: 0 40px
+#small
+  font-size: 18px
+
+.about-content
+  font-size: 22px
+  margin-top: 220px
+  font-weight: $light
+  padding: 30px
+  margin-bottom: 70px
+
+.about-links
+  padding: 30px
+
+
+.contact-wrapper
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+  // min-height: 100vh
+  width: 100%
+  margin-top: 80px
+  // position: absolute
+  margin-bottom: 100px
+  padding: 10px 50px 10px 10px
+
+.contact-title
+  padding: 30px
+  h2
+    font-size: 30px
+    font-weight: $regular
+form
+  display: flex
+  flex-direction: column
+  // min-width: 550px
+  .write, .write-area
+    min-width: 350px
+    border: none
+    border-bottom: 1px solid #262626
+    // height: 45px
+    font-size: 14px
+    padding: 2px
+    margin-bottom: 30px
+.write:focus, .write-area:focus
+  border-bottom: 4px solid black
+  outline: none
+  background: #f7f8f9
+.write:hover, .write-area:hover
+  border-bottom: 4px solid black
+  background: #f7f8f9
+.write-area
+  height: 100px
+.write
+  height: 45px
+
+::placeholder
+  font-family: $font
+
+#send-button
+    background: none
+    outline: none
+    border: none
+    font-weight: 600
+    font-size: 16px
+    cursor: pointer
+    color: #ccc
+
+
+#send-button:hover
+    color: black
+
+#send-button:hover>i
+    margin-left: 30px
+
+
+.arrow_forward
+    font-size: 30px
+    left: -30px
+    top: 10px
+    position: relative
+    color: black
+
+.fa
+  font-size: 20px
+  color: black
+  padding: 10px
+  width: 20px
+  height: 20px
+  text-decoration: none
+  border-radius: 50%
+  border: 1px
+  text-align: center
+  display: inline-block
+  margin-top: 50px
+  a
+    display: inline-block
+
+.fa:hover
+  padding: 9px
+  border-style: solid
+  border-color: black
+  opacity: 0.5
+  display: inline-block
+
+#call-to-action
+  position: relative
+  bottom: 150px
+  left: 400px
+  height: 60px
+  padding: 20px
+  border: none
+  background: transparent
+  border: 1px solid black
+  width: 240px
+  transition: 0.6s
+  overflow: hidden
+  a
+    font-size: 16px
+    color: black
+
+#call-to-action:focus
+  outline: none
+
+#call-to-action::before
+    content: ''
+    display: block
+    position: absolute
+    background: rgba(255, 255, 255, 0.5)
+    width: 60px
+    height: 100%
+    left: 0
+    top: 0
+    opacity: .5s
+    filter: blur(30px)
+    transform: translateX(-130px)skewX(-15deg)
+
+#call-to-action::after
+  content: ''
+  display: block
+  position: absolute
+  background: (255,255, 255, .2)
+  width: 30px
+  height: 100%
+  left: 30px
+  top: 0
+  opacity: 0
+  filter: blur(30px)
+  transform: translate(-100px) scaleX(-15deg)
+
+#call-to-action:hover
+    background: black
+    cursor: pointer
+    a
+      color: #e2e2e2
+
+#call-to-action:hover::before
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 0.6
+    transition: .7s
+
+#call-to-action:hover::after
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 1
+    transition: .7s
+
+#sendmail
+  height: 50px
+  padding: 15px
+  border: none
+  background: transparent
+  border: 1px solid black
+  width: 180px
+  transition: 0.6s
+  overflow: hidden
+  a
+    font-size: 16px
+    color: black
+
+
+#sendmail:focus
+  outline: none
+
+#sendmail::before
+    content: ''
+    display: block
+    position: absolute
+    background: rgba(255, 255, 255, 0.5)
+    width: 60px
+    height: 100%
+    left: 0
+    top: 0
+    opacity: .5s
+    filter: blur(30px)
+    transform: translateX(-130px)skewX(-15deg)
+
+#sendmail::after
+  content: ''
+  display: block
+  position: absolute
+  background: (255,255, 255, .2)
+  width: 30px
+  height: 100%
+  left: 30px
+  top: 0
+  opacity: 0
+  filter: blur(30px)
+  transform: translate(-100px) scaleX(-15deg)
+
+#sendmail:hover
+    background: black
+    cursor: pointer
+    a
+      color: #e2e2e2
+
+#sendmail:hover::before
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 0.6
+    transition: .7s
+
+#sendmail:hover::after
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 1
+    transition: .7s
+
+
+
+
+.copyright
+  padding: 0 50px
+  bottom: 80px
+  left: 45px
+  position: relative
+  a
+    color: black
+    font-size: 18px
+
+
+.copy
+  margin-bottom: 80px
+  margin-left: 40px
+  padding: 0 50px
+  height: auto
+  width: 100%
+  display: block
+  a
+    color: black
+    font-size: 18px
