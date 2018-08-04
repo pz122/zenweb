@@ -1,7 +1,7 @@
 function sendEmail(e) {
   e.preventDefault();
 
-  const POST_URL = 'https://script.google.com/macros/s/AKfycbz-j6C9iQEUvPtksfI3ZRBQyn47oljCZF04lS6Lw_nCoNeCQV4/exec';
+  const POST_URL = '1PQ-3ysZzPQ8ZbnTAwBErKahW1O1Thl9Xfe8orvsiZKzS8DuG7qU5cAz5';
 
   const postRequest = {
     name: e.target['name-field'].value,
