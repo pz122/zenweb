@@ -1,0 +1,20 @@
+@media screen and (max-width:812px) {
+  .pricing-home{
+    margin-top: -70px !important;
+    margin-left: 0
+  }
+
+  .price-home h1{
+    min-width: 10px !important;
+    font-size: 26px
+  }
+
+  .price-home{
+    padding: 20px 0px !important;
+    top: 75px
+  }
+
+  .home-content{
+    padding: 20px 30px !important
+  }
+}
