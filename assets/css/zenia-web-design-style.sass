@@ -4,12 +4,12 @@ $font: 'Work Sans', sans-serif
 $light: 300
 $regular: 400
 $semibold: 600
-// $bold: 700
 
+::-webkit-scrollbar
+  display: none
 
 #home
-  overflow-y: hidden
-  overflow-x: auto
+  overflow-x: hidden
   height: 100vh
 
 #noscroll
@@ -182,32 +182,26 @@ a
     overflow: auto
     z-index: 1
 
-.homepage
-  top: 140px
-  left: 900px
-  position: absolute
-  display: flex
-  flex-direction: row
-  width: 100%
-  height: 100vh
-  padding: 20px 100px
-  h1
-    font-weight: $semibold
-    font-size: 28px
+
 
 
 .right
-  width: 200px
+  width: 0px
   height: 5px
   position: relative
   background: black
-  top: 80px
-  right: 120px
+  transform: rotate(90deg)
+  top: -100px
+  left: 45%
+  // text-align: center
+  // justify-content: center
+  // display: flex
+  // flex-direction: column
 
 .right::before
   content: ''
   position: absolute
-  width: 100px
+  width: 0px
   height: 2px
   background: black
 
@@ -215,7 +209,7 @@ a
 .right::after
   content: ''
   position: absolute
-  width: 120px
+  width: 80px
   height: 2px
   background: black
   animation: animate 2s linear infinite
@@ -245,14 +239,27 @@ a
   a
     color: #202021
 
-.services
-  margin: 35px 150px
+.homepage
+  position: relative
   display: flex
-  flex-direction: row
+  flex-direction: column
+  flex-wrap: wrap
+  width: 100%
+  padding: 20px 100px
+  h1
+    font-weight: $semibold
+    font-size: 28px
+
+.services
+  margin: 35px 10px
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  align-items: flex-start
   width: 100%
   .web-design, .graphic-design, .front-end
-    min-width: 400px
-    padding: 8px 80px
+    max-width: 500px
+    padding: 20px 0px
     line-height: 1.7
     h3
      text-transform: capitalize
@@ -260,24 +267,36 @@ a
     p
       font-weight: $regular
       font-size: 14px
+    img
+      z-index: -10
 
-#one, #two, #three
-  -webkit-transition: all 2s
-  -moz-transition: all 2s
-  -o-transition: all 2s
-  transition: all 2s
-  bottom: -400px
-  position: absolute
-  z-index: -1
+.bounce-up
+  opacity: 0
+  -moz-transition: all 700ms ease-out
+  -webkit-transition: all 700ms ease-out
+  -o-transition: all 700ms ease-out
+  transition: all 700ms ease-out
+  -moz-transform: translate3d(0px, 200px, 0px)
+  -webkit-transform: translate3d(0px, 200px, 0px)
+  -o-transform: translate(0px, 200px)
+  -ms-transform: translate(0px, 200px)
+  transform: translate3d(0px, 200px, 0px)
+  -webkit-backface-visibility: hidden
+  -moz-backface-visibility: hidden
+  backface-visibility: hidden
 
-#one.slideup
-  bottom: 650px
+.in-view
+  opacity: 1
+  -moz-transition: all 700ms ease-out
+  -webkit-transition: all 700ms ease-out
+  -o-transition: all 700ms ease-out
+  transition: all 700ms ease-out
+  -moz-transform: translate3d(0px, 0px, 0px)
+  -webkit-transform: translate3d(0px, 0px, 0px)
+  -o-transform: translate(0px, 0px)
+  -ms-transform: translate(0px, 0px)
+  transform: translate3d(0px, 0px, 0px)
 
-#two.slideup
-  bottom: 180px
-
-#three.slideup
-  bottom: 240px
 
 .aboutme
   max-width: 800px
@@ -339,7 +358,6 @@ form
     min-width: 280px
     border: none
     border-bottom: 1px solid #262626
-    // height: 45px
     font-size: 13px
     padding: 2px
     margin-bottom: 30px
@@ -526,16 +544,19 @@ form
     transition: .7s
 
 
-
-
-.copyright
-  padding: 0 50px
-  bottom: 80px
-  left: 45px
-  position: relative
+.thanks, .error
+  height: 80vh
+  width: 100%
+  display: flex
+  padding: 0px 15px
+  justify-content: center
+  align-items: center
+  flex-direction: column
   a
     color: black
-    font-size: 15px
+
+.error h1
+  font-family: 'Space Mono', monospace
 
 
 .copy
