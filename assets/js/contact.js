@@ -6,7 +6,7 @@ function sendEmail(e) {
   const postRequest = {
     name: e.target['name-field'].value,
     email: e.target['email-field'].value,
-    email: e.target['tel-field'].value,
+    tel: e.target['tel-field'].value,
     body: e.target['message-field'].value
   };
 
