@@ -3,6 +3,11 @@
 ::-webkit-scrollbar
   display: none
 
+html,body
+  margin: 0
+  padding: 0
+  overflow-x: hidden
+
 #tiny
   font-size: 12px
 
@@ -20,13 +25,11 @@ $fonttype : 'Source Sans Pro', sans-serif
   margin-top: -40px
   font-family: $fonttype
   border: 20px white solid
-  padding-left: 0px
-  margin-left: 0px
   display: flex
   justify-content: center
   align-items: center
   flex-wrap: wrap
-  overflow: scroll
+  overflow-y: scroll
 
 .price-home
   display: flex
@@ -39,15 +42,12 @@ $fonttype : 'Source Sans Pro', sans-serif
   text-align: center
   padding: 25px 20px
   overflow: auto
-  // white-space: nowrap
   text-overflow: ellipsis
   min-width: 0
   .home-title
     h1
       font-weight: 400
-      // min-width: 300px
   .home-content
-    // background: #222323
     background: white
     color: black
     opacity: 0.8
@@ -72,6 +72,8 @@ $fonttype : 'Source Sans Pro', sans-serif
   z-index: 10
   right: 50px
   bottom: 60px
+  float: right
+  overflow-x: hidden
   .fa
     font-size: 20px
 
@@ -185,7 +187,7 @@ $fonttype : 'Source Sans Pro', sans-serif
 
 
 .addons
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%)
   font-family: $fonttype
   color: #444444
   text-align: center
@@ -214,7 +216,7 @@ $fonttype : 'Source Sans Pro', sans-serif
   background-image: url('./img/zenia-web-design-premium-design.jpg')
   background-size: cover
   background-position: center
-  border: 24px solid white
+  border: 20px solid white
   display: flex
   justify-content: center
   align-items: center
@@ -241,9 +243,6 @@ $fonttype : 'Source Sans Pro', sans-serif
       font-size: 27px
       font-weight: 700
       color: #3d3d3d
-
-
-
 
 .price-copy
   top: -44px
