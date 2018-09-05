@@ -332,7 +332,7 @@ a
   margin-top: 80px
   // position: absolute
   margin-bottom: 100px
-  padding: 10px 50px 10px 10px
+  padding: 10px 20px 10px 30px
 
 .contact-title
   padding: 30px
@@ -342,25 +342,30 @@ a
 form
   display: flex
   flex-direction: column
-  // min-width: 550px
+  min-width: 420px
   .write, .write-area
-    min-width: 280px
-    border: none
+    min-width: 300px
+    border-top: none
+    border-left: none
+    border-right: none
     border-bottom: 1px solid #262626
     font-size: 13px
-    padding: 2px
+    padding: 5px
     margin-bottom: 30px
 .write:focus, .write-area:focus
-  border-bottom: 4px solid black
+  border-bottom: 2px solid black
   outline: none
   background: #f7f8f9
+  margin-bottom: 29px
 .write:hover, .write-area:hover
-  border-bottom: 4px solid black
+  border-bottom: 2px solid black
   background: #f7f8f9
+  margin-bottom: 29px
+
 .write-area
   height: 100px
 .write
-  height: 45px
+  height: 35px
 
 ::placeholder
   font-family: $font
