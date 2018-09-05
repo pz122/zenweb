@@ -45,7 +45,6 @@
     <!-- <link rel="stylesheet" href="./assets/css/zenia-web-design-style.min.css" type="text/css"> -->
     <link rel="stylesheet" href="https://zeniadesign.com/assets/css/zenia-web-design-style.min.css" type="text/css">
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script type="text/javascript" src="https://zeniadesign.com/assets/js/contact.js"></script>
     <script type="text/javascript">
     (function(){
       var words = [
@@ -143,20 +142,31 @@
         <a href="https://zeniadesign.com">&copy; 2018.</a>
     </footer>
     <script type="text/javascript">
-    function sendEmail(e) {
-      e.preventDefault();
+function sendEmail(e) {
+  e.preventDefault();
 
-      const POST_URL = 'https://script.google.com/macros/s/AKfycbz1lDGBFr6ohhoIZhOLY_XgnMU6-MA7O-UJRZWDbo051nxKUOiE/exec';
 
-      const postRequest = {
-        name: e.target['name-field'].value,
-        email: e.target['email-field'].value,
-        tel: e.target['tel-field'].value,
-        body: e.target['body-field'].value
-      }
-      // alert('testsss');
-    };
+  const POST_URL = 'https://script.google.com/macros/s/AKfycbz1lDGBFr6ohhoIZhOLY_XgnMU6-MA7O-UJRZWDbo051nxKUOiE/exec';
 
+  const postRequest = {
+    name: e.target['name-field'].value,
+    email: e.target['email-field'].value,
+    tel: e.target['tel-field'].value,
+    body: e.target['body-field'].value
+  };
+
+  if(POST_URL) {
+    $.post(POST_URL, JSON.stringify(postRequest))
+      .then(res => {
+
+        e.target.reset();
+        // alert('Thank you for your message, we will get back to you soon.');
+        window.location.replace("https://zeniadesign.com/contact-form-received.html");
+      });
+  } else {
+    alert('Opps, something went wrong please try again.');
+  }
+}
   </script>
 
   </body>
