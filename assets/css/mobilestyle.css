@@ -24,23 +24,11 @@
     top: 90px !important;
     width: 50px !important;
   }
+
   .home{
-    left: 40px !important;
-    width: 100% !important;
-    justify-content: flex-start !important;
-    padding-left: 30px !important;
+    padding-left: 35px !important;
+    padding-right: 7px
   }
-
-  .home h1{
-    font-size: 40px !important;
-    overflow-x: hidden;
-  }
-
-  #call-to-action{
-    left: 100px !important;
-    margin-top: 50px !important;
-  }
-
 
   .copy{
     padding: 0 0px !important
