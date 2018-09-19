@@ -195,9 +195,14 @@ a
   align-items: flex-start
   padding-left: 100px
   flex-wrap: wrap
+  padding-right: 50px
+  margin-right: 40px
+  word-wrap: break-word
+
   h1
     font-family: 'Space Mono', monospace
     font-size: 42px
+    padding-right: 30px
 
   a
     // color: #202021
@@ -205,8 +210,10 @@ a
   p
     font-size: 22px
     margin-top: -18px
-    min-width: 200px
-    max-width: 800px
+    padding: 0px 10px 0px 0px
+    margin-right: 30px
+
+
 
 .homepage
   position: relative
@@ -234,6 +241,7 @@ a
     p
       font-weight: $regular
       font-size: 15px
+
 .web-design
   flex-direction: row-reverse
   justify-content: space-between
@@ -243,22 +251,26 @@ a
   min-height: 60vh
   flex-wrap: wrap
   margin-bottom: 50px
+  .text
+    // width: 35%
 
 .graphic-design
   flex-direction: row
-  // align-items: center
   justify-content: space-between
   width: 80%
   display: flex
   line-height: 1.7
   min-height: 60vh
   flex-wrap: wrap
+  .text
+    // max-width: 35%
 
 .image
+  z-index: -10
   img
-    max-width: 400px
-    margin-top: 50px
+    max-width: 500px
     padding: 10px
+
 
 .bounce-up
   opacity: 0
@@ -302,35 +314,62 @@ a
 
 
 
-.aboutme
-  max-width: 800px
-  margin-bottom: 100px
+
 .intro
-  line-height: 1.2
+  padding: 0 40px
+  line-height: 1.7
+  min-height: 65vh
+  #title
+    font-size: 40px
+    font-weight: $regular
+    max-width: 700px
+    text-align: center
+
+.design-approach
+  line-height: 2.5
 
 .about-wrapper
-  line-height: 2
   display: flex
-  flex-direction: row
-  justify-content: space-around
+  flex-direction: column
+  justify-content: center
+  align-items: center
   flex-wrap: wrap
   height: 100%
-  margin-top: 180px
-
-#title
-  font-size: 40px
-  font-weight: $regular
-  min-width: 300px
-  padding: 0 40px
-#small
-  font-size: 18px
+  margin-top: 120px
+  margin-bottom: 90px
 
 .about-content
   font-size: 18px
-  margin-top: 220px
-  font-weight: $light
+  font-weight: $regular
   padding: 30px
-  margin-bottom: 70px
+  margin-bottom: 50px
+  max-width: 800px
+  margin-right: auto
+  margin-left: 60px
+
+
+.web_author
+  margin-top: 100px
+  position: relative
+  margin-bottom: 50px
+
+  h2
+    font-size: 25px
+    color: #969696
+    // font-weight: $regular
+  span
+    top: -20px
+    font-size: 15px
+    position: relative
+    font-weight: $light
+  p
+    top: -17px
+    position: relative
+    line-height: 1.7
+    font-weight: $light
+    max-width: 520px
+
+
 
 .about-links
   padding: 30px
@@ -500,6 +539,71 @@ form
     transition: .7s
     overflow: hidden !important
 
+#call-button
+  height: 42px
+  margin-top: 40px
+  padding: 10px
+  border: none
+  background: black
+  width: 180px
+  transition: 0.6s
+  overflow: hidden
+  a
+    font-size: 14px
+    color: white
+    position: relative
+    top: -18px
+#call-button:focus
+  outline: none
+  overflow: hidden
+
+#call-button::before
+    content: ''
+    display: block
+    position: relative
+    background: rgba(255, 255, 255, 0.5)
+    width: 60px
+    height: 100%
+    left: 0
+    top: 0
+    opacity: .5s
+    filter: blur(30px)
+    transform: translateX(-130px)skewX(-15deg)
+    overflow: hidden !important
+
+#call-button::after
+  content: ''
+  display: block
+  position: relative
+  background: (255,255, 255, .2)
+  width: 30px
+  height: 100%
+  left: 30px
+  top: 0
+  opacity: 0
+  filter: blur(30px)
+  transform: translate(-100px) scaleX(-15deg)
+  overflow: hidden !important
+
+#call-button:hover
+    background: transparent
+    border: 1px solid black
+    cursor: pointer
+    overflow: hidden !important
+    a
+      color: black
+
+#call-button:hover::before
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 0.6
+    transition: .7s
+    overflow: hidden !important
+
+#call-button:hover::after
+    transform: translateX(300px)skewX(-15deg)
+    opacity: 1
+    transition: .7s
+    overflow: hidden !important
 
 #sendmail
   height: 45px
@@ -530,6 +634,7 @@ form
     opacity: .5s
     filter: blur(30px)
     transform: translateX(-130px)skewX(-15deg)
+    overflow: hidden !important
 
 #sendmail::after
   content: ''
@@ -543,6 +648,7 @@ form
   opacity: 0
   filter: blur(30px)
   transform: translate(-100px) scaleX(-15deg)
+  overflow: hidden !important
 
 #sendmail:hover
     background: black
@@ -554,11 +660,13 @@ form
     transform: translateX(300px)skewX(-15deg)
     opacity: 0.6
     transition: .7s
+    overflow: hidden !important
 
 #sendmail:hover::after
     transform: translateX(300px)skewX(-15deg)
     opacity: 1
     transition: .7s
+    overflow: hidden !important
 
 
 .thanks, .error

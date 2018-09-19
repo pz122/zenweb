@@ -27,7 +27,14 @@
 
   .home{
     padding-left: 35px !important;
-    padding-right: 7px
+    padding-right: 20px !important
+  }
+
+  .home h1{
+    font-size:38px !important
+  }
+  .home p{
+    font-size: 18px !important
   }
 
   .copy{
@@ -35,10 +42,37 @@
   }
 }
 
+@media screen and (max-width:610px) {
+  .about-content{
+    margin-left: 10px !important
+  }
+}
+
+@media screen and (max-width:420px) {
+  .image img{
+    max-width: 300px !important
+  }
+
+}
+
 @media screen and (max-width:390px){
   form{
     min-width: 250px !important;
     padding: 5px 10px
+  }
+
+
+}
+
+@media screen and (max-width:1200px){
+  .web-design{
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .graphic-design{
+    justify-content: center !important;
+    align-items: center !important;
   }
 
 }
