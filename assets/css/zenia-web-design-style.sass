@@ -5,6 +5,8 @@ $light: 300
 $regular: 400
 $semibold: 600
 
+$font-main: 'Avenir-Heavy-05', sans-serif
+
 ::-webkit-scrollbar
   display: none
 
@@ -246,8 +248,9 @@ a
   .text
     max-width: 500px
     h3
-     text-transform: capitalize
-     font-weight: $semibold
+     font-family: $font-main
+     // text-transform: capitalize
+     // font-weight: $semibold
      font-size: 20px
     p
       font-weight: $regular
@@ -274,6 +277,9 @@ a
   min-height: 60vh
   flex-wrap: wrap
   .text
+    p
+     font-family: $font-main
+
     // max-width: 35%
 
 .image
